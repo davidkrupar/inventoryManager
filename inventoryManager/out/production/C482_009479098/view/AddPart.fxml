@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text layoutX="33.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Part">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <RadioButton fx:id="inHouseButton" layoutX="125.0" layoutY="42.0" mnemonicParsing="false" onAction="#onInHouseButton" selected="true" text="In-House">
+               <toggleGroup>
+                  <ToggleGroup fx:id="tgroup" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="outsourceButton" layoutX="243.0" layoutY="42.0" mnemonicParsing="false" onAction="#onInHouseButton" text="Outsourced" toggleGroup="$tgroup" />
+            <TextField fx:id="addPartId" layoutX="120.0" layoutY="85.0" maxWidth="-Infinity" minWidth="-Infinity" onAction="#hello" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="addPartName" layoutX="120.0" layoutY="131.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="addPartInv" layoutX="120.0" layoutY="177.0" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="addPartCost" layoutX="120.0" layoutY="222.5" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="addPartMax" layoutX="120.0" layoutY="267.5" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="addPartMahineId" layoutX="120.0" layoutY="312.5" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="addPartMin" layoutX="287.0" layoutY="267.5" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="100.0" />
+            <Button fx:id="addPartSave" layoutX="225.0" layoutY="357.5" mnemonicParsing="false" onAction="#onAddPartSave" text="Save">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="addPartCancel" layoutX="306.5" layoutY="357.5" mnemonicParsing="false" onAction="#onAddPartCancel" text="Cancel" />
+            <Text layoutX="23.0" layoutY="103.068359375" strokeType="OUTSIDE" strokeWidth="0.0" text="ID" />
+            <Text fontSmoothingType="LCD" layoutX="23.0" layoutY="149.068359375" strokeType="OUTSIDE" strokeWidth="0.0" text="Name" />
+            <Text layoutX="23.0" layoutY="195.068359375" strokeType="OUTSIDE" strokeWidth="0.0" text="Inv" />
+            <Text layoutX="23.0" layoutY="240.568359375" strokeType="OUTSIDE" strokeWidth="0.0" text="Price/Cost" />
+            <Text layoutX="237.0" layoutY="285.568359375" strokeType="OUTSIDE" strokeWidth="0.0" text="Min" />
+            <Text layoutX="23.0" layoutY="285.568359375" strokeType="OUTSIDE" strokeWidth="0.0" text="Max" />
+            <Label fx:id="partLabel" layoutX="23.0" layoutY="317.0" text="Machine ID" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
